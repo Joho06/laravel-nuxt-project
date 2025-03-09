@@ -22,7 +22,7 @@ class UserController extends Controller
 
     public function getWeather(User $user)
     {
-        // Si ya tienes los datos de temperatura y condición, puedes devolverlos directamente
+
         if ($user->temperature && $user->condition) {
             return response()->json([
                 'temperature' => $user->temperature,
@@ -30,7 +30,7 @@ class UserController extends Controller
             ]);
         }
 
-        // Si no, realiza la consulta a la API del clima para obtenerlos en tiempo real
+
         $client = new Client();
         $response = $client->get("https://api.openweathermap.org/data/2.5/weather?lat={$user->latitude}&lon={$user->longitude}&appid=YOUR_API_KEY&units=metric");
 

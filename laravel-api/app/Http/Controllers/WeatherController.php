@@ -8,7 +8,7 @@ class WeatherController extends Controller
 {
     public function getWeather($lat, $lon)
     {
-        // Usa tu API de clima aquí, como OpenWeatherMap o cualquier otra
+
         $apiKey = env('OPENWEATHER_API_KEY');
         $url = "https://api.openweathermap.org/data/2.5/weather?lat={$lat}&lon={$lon}&appid={$apiKey}&units=metric";
 

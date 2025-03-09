@@ -20,7 +20,7 @@ class User extends Authenticatable
         'name',
         'email',
         'latitude',
-        'longitude',  // No es necesario incluir 'password'
+        'longitude',
     ];
 
     /**
